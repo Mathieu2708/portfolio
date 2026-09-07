@@ -149,3 +149,46 @@ footer{border-top:1px solid var(--border);padding:28px 24px;text-align:center;co
     padding: 10px;
   }
 }
+/* Menu déroulant des semaines de stage */
+/* Grille des 4 semaines de stage */
+.weeks-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  margin: 25px 0;
+}
+.week-block {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 20px;
+}
+.week-block h4 {
+  font-size: 16px;
+  color: var(--accent);
+  margin: 0 0 10px 0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.week-block h4 span {
+  font-size: 13px;
+  color: var(--muted);
+  font-weight: 500;
+  text-transform: none;
+  letter-spacing: 0;
+  display: block;
+  margin-top: 3px;
+}
+.week-block p {
+  font-size: 14px;
+  color: var(--text);
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* Adaptation pour les téléphones */
+@media (max-width: 760px) {
+  .weeks-grid {
+    grid-template-columns: 1fr;
+  }
+}
